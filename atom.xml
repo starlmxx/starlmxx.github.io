@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>无尽星空</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-01-08T15:03:02.015Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>starlmxx</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019年小目标</title>
+    <link href="http://yoursite.com/2019/01/02/2019%E5%B9%B4%E5%B0%8F%E7%9B%AE%E6%A0%87/"/>
+    <id>http://yoursite.com/2019/01/02/2019年小目标/</id>
+    <published>2019-01-02T00:52:07.000Z</published>
+    <updated>2019-01-08T15:03:02.015Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;2019年小目标&quot;&gt;&lt;a href=&quot;#2019年小目标&quot; class=&quot;headerlink&quot; title=&quot;2019年小目标&quot;&gt;&lt;/a&gt;2019年小目标&lt;/h3&gt;&lt;p&gt;​    2018年一眨眼就过去了，在这一年里，我既没有定什么明确的目标，也没有进行有效的总结，感觉这一年都虚度了。今天是2019年的第一天，在新的一年里，我不能在这么浑浑噩噩的过下去了，因此给自己定几个小目标，希望明年这个时间能够有一个满意的结果。&lt;/p&gt;
+&lt;h4 id=&quot;一、工作&quot;&gt;&lt;a href=&quot;#一、工作&quot; class=&quot;headerlink&quot; title=&quot;一、工作&quot;&gt;&lt;/a&gt;一、工作&lt;/h4&gt;&lt;p&gt;​    2019年希望自己可以在技术上有较大的提高，在设计和架构方面需要持续的学习和精进。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、阅读优秀的开源项目源码，如AFNetworking、SDWebImage、YYKit
+2、学习Swift，用Swift做一个小项目
+3、学习Python
+4、学习算法，刷LeetCode 300道题
+5、学习计算机基础知识，网络、数据库、操作系统等
+6、学习C/C++
+7、学习iOS逆向知识
+8、学习设计模式
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cocoapods解决静态库冲突</title>
+    <link href="http://yoursite.com/2018/03/29/Cocoapods%E8%A7%A3%E5%86%B3%E9%9D%99%E6%80%81%E5%BA%93%E5%86%B2%E7%AA%81/"/>
+    <id>http://yoursite.com/2018/03/29/Cocoapods解决静态库冲突/</id>
+    <published>2018-03-29T13:32:25.000Z</published>
+    <updated>2019-01-08T15:03:28.819Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Cocoapods解决静态库冲突&quot;&gt;&lt;a href=&quot;#Cocoapods解决静态库冲突&quot; class=&quot;headerlink&quot; title=&quot;Cocoapods解决静态库冲突&quot;&gt;&lt;/a&gt;Cocoapods解决静态库冲突&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Cocoapods中引入的第三库如果同时引入了某一个静态库的话，pod install的时候会提示静态库冲突，这个问题怎么解决呢？&lt;/p&gt;
+&lt;h4 id=&quot;一、降低cocoapods版本&quot;&gt;&lt;a href=&quot;#一、降低cocoapods版本&quot; class=&quot;headerlink&quot; title=&quot;一、降低cocoapods版本&quot;&gt;&lt;/a&gt;一、降低cocoapods版本&lt;/h4&gt;&lt;p&gt;cocoapods1.0.1之前的版本不会存在这个问题，所以可以通过cocoapods降级的方式解决这个问题。但是这样就必须团队所有成员都使用较老版本的cocoapods，并且不能体验到新版的特性，因此并不适合。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo教程(一)--搭建个人博客</title>
+    <link href="http://yoursite.com/2016/07/08/Hexo%E6%95%99%E7%A8%8B-%E4%B8%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/07/08/Hexo教程-一-搭建个人博客/</id>
+    <published>2016-07-08T06:45:46.000Z</published>
+    <updated>2016-07-08T06:45:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/07/08/hello-world/"/>
+    <id>http://yoursite.com/2016/07/08/hello-world/</id>
+    <published>2016-07-08T06:40:46.000Z</published>
+    <updated>2019-01-08T15:00:42.055Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

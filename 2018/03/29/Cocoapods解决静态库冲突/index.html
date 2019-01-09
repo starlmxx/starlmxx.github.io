@@ -51,13 +51,13 @@
 <link rel="stylesheet" href="/css/main.css?v=6.7.0"/>
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=6.7.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=6.7.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=6.7.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
@@ -104,13 +104,15 @@
 <meta property="og:site_name" content="无尽星空">
 <meta property="og:description" content="Cocoapods解决静态库冲突前言Cocoapods中引入的第三库如果同时引入了某一个静态库的话，pod install的时候会提示静态库冲突，这个问题怎么解决呢？
 一、降低cocoapods版本cocoapods1.0.1之前的版本不会存在这个问题，所以可以通过cocoapods降级的方式解决这个问题。但是这样就必须团队所有成员都使用较老版本的cocoapods，并且不能体验到新版的特性，因此">
-<meta property="og:updated_time" content="2018-03-29T14:00:42.000Z">
+<meta property="og:updated_time" content="2019-01-08T15:03:28.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cocoapods解决静态库冲突">
 <meta name="twitter:description" content="Cocoapods解决静态库冲突前言Cocoapods中引入的第三库如果同时引入了某一个静态库的话，pod install的时候会提示静态库冲突，这个问题怎么解决呢？
 一、降低cocoapods版本cocoapods1.0.1之前的版本不会存在这个问题，所以可以通过cocoapods降级的方式解决这个问题。但是这样就必须团队所有成员都使用较老版本的cocoapods，并且不能体验到新版的特性，因此">
 
 
+
+  <link rel="alternate" href="/atom.xml" title="无尽星空" type="application/atom+xml"/>
 
 
 
@@ -367,12 +369,24 @@
                 
               
 
-              <time title="创建时间：2018-03-29 21:32:25 / 修改时间：22:00:42" itemprop="dateCreated datePublished" datetime="2018-03-29T21:32:25+08:00">2018-03-29</time>
+              <time title="创建时间：2018-03-29 21:32:25" itemprop="dateCreated datePublished" datetime="2018-03-29T21:32:25+08:00">2018-03-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-08 23:03:28" itemprop="dateModified" datetime="2019-01-08T23:03:28+08:00">2019-01-08</time>
               
             
           </span>
@@ -400,6 +414,36 @@
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                  <span>227 字</span>
+                
+                <span title="本文字数"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span>1 min</span>
+                
+                <span title="阅读时长"></span>
+              
+            </div>
+          
 
           
 
@@ -418,6 +462,7 @@
       
         <h1 id="Cocoapods解决静态库冲突"><a href="#Cocoapods解决静态库冲突" class="headerlink" title="Cocoapods解决静态库冲突"></a>Cocoapods解决静态库冲突</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Cocoapods中引入的第三库如果同时引入了某一个静态库的话，pod install的时候会提示静态库冲突，这个问题怎么解决呢？</p>
 <h4 id="一、降低cocoapods版本"><a href="#一、降低cocoapods版本" class="headerlink" title="一、降低cocoapods版本"></a>一、降低cocoapods版本</h4><p>cocoapods1.0.1之前的版本不会存在这个问题，所以可以通过cocoapods降级的方式解决这个问题。但是这样就必须团队所有成员都使用较老版本的cocoapods，并且不能体验到新版的特性，因此并不适合。</p>
+<a id="more"></a> 
 <h4 id="二、直接源码导入"><a href="#二、直接源码导入" class="headerlink" title="二、直接源码导入"></a>二、直接源码导入</h4><p>不降级cocoapods的情况下，也可以通过手动管理某一个库的源码，另外一个库用pod引入，这样虽然也能解决冲突的问题，但是手动管理第三库的源码非常难以维护，因此也只能作为临时解决方案。</p>
 <h4 id="三、手动删除静态库"><a href="#三、手动删除静态库" class="headerlink" title="三、手动删除静态库"></a>三、手动删除静态库</h4>
       
@@ -482,6 +527,11 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MjA1MS8xODU5OA=="></div>
+    </div>
 
   
 
@@ -561,6 +611,13 @@
           
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
 
@@ -588,7 +645,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cocoapods解决静态库冲突"><span class="nav-number">1.</span> <span class="nav-text">Cocoapods解决静态库冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、降低cocoapods版本"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">一、降低cocoapods版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、直接源码导入"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">二、直接源码导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、手动删除静态库"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">三、手动删除静态库</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cocoapods解决静态库冲突"><span class="nav-text">Cocoapods解决静态库冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、降低cocoapods版本"><span class="nav-text">一、降低cocoapods版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、直接源码导入"><span class="nav-text">二、直接源码导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、手动删除静态库"><span class="nav-text">三、手动删除静态库</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -620,25 +677,15 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.2.2</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
 
 
 <div>
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv" style='display:none'>
-    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+<span id="helloworld" style='display:none'>
+    --- 我是有底线的 ---
     <span class="post-meta-divider">|</span>
-</span>
-<span id="busuanzi_container_site_uv" style='display:none'>
-    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
 </span>
 </div>
 
@@ -756,6 +803,20 @@
 
 
 
+  
+    <script>
+      window.livereOptions = {
+        refer: '2018/03/29/Cocoapods解决静态库冲突/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
