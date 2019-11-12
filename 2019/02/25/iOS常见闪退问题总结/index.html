@@ -14,7 +14,7 @@
 <meta property="og:description" content="iOS常见闪退问题总结​    在所有线上出现的问题中，闪退是最严重的。因此，在开发过程中我们要尽量避免闪退的发生，尽可能的提高程序的稳定性。本文针对项目线上出现过的闪退问题进行分类和总结，在后续开发过程中可以吸取经验教训，避免犯同样的错误。或者再次遇到类似的闪退问题时，可以比较快速的进行定位并修复。 一、常见闪退问题1、数组访问越界  ​    解决方法也非常简单，只需要判断下索引和数组大小就可">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://2.bp.blogspot.com/-A8kpaBiY6EU/Wdz9a3TkWII/AAAAAAAAAD0/Wjf8RON0DOEG03Nd-AX1MV_GP2FWbrd1gCLcBGAs/s1600/maxresdefault.jpg">
-<meta property="og:updated_time" content="2019-11-11T14:06:20.530Z">
+<meta property="og:updated_time" content="2019-11-12T14:19:59.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS常见闪退问题总结">
 <meta name="twitter:description" content="iOS常见闪退问题总结​    在所有线上出现的问题中，闪退是最严重的。因此，在开发过程中我们要尽量避免闪退的发生，尽可能的提高程序的稳定性。本文针对项目线上出现过的闪退问题进行分类和总结，在后续开发过程中可以吸取经验教训，避免犯同样的错误。或者再次遇到类似的闪退问题时，可以比较快速的进行定位并修复。 一、常见闪退问题1、数组访问越界  ​    解决方法也非常简单，只需要判断下索引和数组大小就可">
@@ -65,11 +65,11 @@
 </nav>
     <div id="main"><section class="article">
   <h2 class="title">iOS常见闪退问题总结</h2>
-  <p class="sub">2019-02-25</p>
+  <p class="sub">2019-02-25 19:23:30</p>
   <article class="content">
     <h3 id="iOS常见闪退问题总结"><a href="#iOS常见闪退问题总结" class="headerlink" title="iOS常见闪退问题总结"></a>iOS常见闪退问题总结</h3><p>​    在所有线上出现的问题中，闪退是最严重的。因此，在开发过程中我们要尽量避免闪退的发生，尽可能的提高程序的稳定性。本文针对项目线上出现过的闪退问题进行分类和总结，在后续开发过程中可以吸取经验教训，避免犯同样的错误。或者再次遇到类似的闪退问题时，可以比较快速的进行定位并修复。</p>
-<h4 id="一、常见闪退问题"><a href="#一、常见闪退问题" class="headerlink" title="一、常见闪退问题"></a>一、常见闪退问题</h4><h5 id="1、数组访问越界"><a href="#1、数组访问越界" class="headerlink" title="1、数组访问越界"></a>1、数组访问越界</h5><p><img src="./set_beyond_bounds.png" alt="set_beyond_bounds"></p>
-<p><img src="./array_beyond_bounds.png" alt="array_beyond_bounds"></p>
+<h4 id="一、常见闪退问题"><a href="#一、常见闪退问题" class="headerlink" title="一、常见闪退问题"></a>一、常见闪退问题</h4><h5 id="1、数组访问越界"><a href="#1、数组访问越界" class="headerlink" title="1、数组访问越界"></a>1、数组访问越界</h5><p><img src="https://ws1.sinaimg.cn/large/006C7g0Qly1g8vm8bpt5hj30lo0a075p.jpg" alt="set_beyond_bounds.png"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006C7g0Qly1g8vm9lmyuhj30m20ddwgh.jpg" alt="array_beyond_bounds.png"></p>
 <p>​    解决方法也非常简单，只需要判断下索引和数组大小就可以避免。这种闪退是在开发过程中应该<strong>尽可能避免</strong>的。</p>
 <h5 id="2、多线程访问"><a href="#2、多线程访问" class="headerlink" title="2、多线程访问"></a>2、多线程访问</h5><pre><code class="objective-c">@interface ApiSessionManager ()
 @property (copy, nonatomic) NSURL *baseSecurityURL;
@@ -168,8 +168,8 @@ if (![termNumber isKindOfClass:[NSNull class]] &amp;&amp; [termNumber isKindOfCl
 <h5 id="6、应用启动时闪退"><a href="#6、应用启动时闪退" class="headerlink" title="6、应用启动时闪退"></a>6、应用启动时闪退</h5><p>​    在某个版本发布后，出现过用户启动后就闪退，而Fabric闪退平台上并没有对应的闪退堆栈，说明在Fabric启动之前应用就闪退了。</p>
 <p>​    这种问题就比较难定位，需要和策划、运营配合，收集反馈遇到问题的用户手机信息，并通过本地Xcode构建上传发布Test Flight测试包给出问题的用户安装，用户再次启动时就可以通过Xcode收集到闪退堆栈，并进行问题定位。通过Xcode收集到的堆栈信息发现，问题出在云信SDK，云信SDK的info.plist支持的架构类型设置错误，不支持armv7架构，导致armv7架构的手机启动app时闪退。通过更新云信SDK后问题解决。</p>
 <p>Xcode查看Crash log类似下图：</p>
-<p><img src="./xcode_crash_log.png" alt="xcode_crash_log"></p>
-<h5 id="7、EXC-BAD-ACCESS-KERN-INVALID-ADDRESS"><a href="#7、EXC-BAD-ACCESS-KERN-INVALID-ADDRESS" class="headerlink" title="7、EXC_BAD_ACCESS / KERN_INVALID_ADDRESS"></a>7、EXC_BAD_ACCESS / KERN_INVALID_ADDRESS</h5><p><img src="./bad_access_crash.png" alt="bad_access_crash"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006C7g0Qly1g8vmad8g54j30t30er0v3.jpg" alt="xcode_crash_log.png"></p>
+<h5 id="7、EXC-BAD-ACCESS-KERN-INVALID-ADDRESS"><a href="#7、EXC-BAD-ACCESS-KERN-INVALID-ADDRESS" class="headerlink" title="7、EXC_BAD_ACCESS / KERN_INVALID_ADDRESS"></a>7、EXC_BAD_ACCESS / KERN_INVALID_ADDRESS</h5><p><img src="https://ws1.sinaimg.cn/large/006C7g0Qly1g8vmax08juj316g062756.jpg" alt="bad_access_crash.png"></p>
 <blockquote>
 <p>Details:</p>
 <p>The stack trace indicates that heap corruption may have caused your app to crash. Memory corruption can occur pretty easily from freeing a dangling pointer, a thread race, or bad pointer arithmetic. The important thing to keep in mind is that the resulting crash may happen long after the initial corruption. As a result, the stack trace for this crash might not provide any clues to the location of the bug in your code. However, you can still fix memory issues with tools from Apple. For speedy resolution of memory corruption issues, we recommend regularly auditing your app with Xcode’s memory debugging facilities: Visual Memory Debugger, Zombies Instrument, Address Sanitizer, Thread Sanitizer and malloc diagnostics.</p>
@@ -197,7 +197,7 @@ if (![termNumber isKindOfClass:[NSNull class]] &amp;&amp; [termNumber isKindOfCl
 </li>
 </ul>
 <h5 id="8、项目中存在两个相同文件名的xib文件，但是两个文件内容不完全相同，访问到某个不存在的属性时会导致闪退"><a href="#8、项目中存在两个相同文件名的xib文件，但是两个文件内容不完全相同，访问到某个不存在的属性时会导致闪退" class="headerlink" title="8、项目中存在两个相同文件名的xib文件，但是两个文件内容不完全相同，访问到某个不存在的属性时会导致闪退"></a>8、项目中存在两个相同文件名的xib文件，但是两个文件内容不完全相同，访问到某个不存在的属性时会导致闪退</h5><p>​    项目某个版本上线后通过闪退分析平台发现，某个页面出现大量闪退。通过闪退堆栈分析，问题出现在<code>SomeHeaderView</code>，提示<code>&lt;SomeHeaderView 0x123def230&gt; setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key headerView</code>，分析代码发现工程里存在两个<code>SomeHeaderView.xib</code>文件，这两个文件中有一个outlet property命名不一样，一个是headerView，一个是myHeaderView，而<code>SomeHeaderView.h</code>对应property的命名是myHeaderView，Xcode打包时将包含属性headerView的xib文件打包进去了，程序运行时找不到headerView对应的property，导致闪退。原来项目工程中只包括一个<code>SomeHeaderView.xib</code>文件的引用，不过文件夹中包括一个多余的<code>SomeHeaderView.xib</code>文件，通过git log分析发现是在项目工程结构调整时，把文件夹中的<code>SomeHeaderView.xib</code>文件也引入到了工程中，导致项目打包时把错误的文件打包进去，引发闪退。删除包含属性headerView的<code>SomeHeaderView.xib</code>文件，重新打包，问题解决。</p>
-<h5 id="9、Fatal-Exception-CALayerInvalidGeometry"><a href="#9、Fatal-Exception-CALayerInvalidGeometry" class="headerlink" title="9、Fatal Exception:  CALayerInvalidGeometry"></a>9、<strong>Fatal Exception:</strong>  CALayerInvalidGeometry</h5><p><img src="./reader_crash.png" alt="reader_crash"></p>
+<h5 id="9、Fatal-Exception-CALayerInvalidGeometry"><a href="#9、Fatal-Exception-CALayerInvalidGeometry" class="headerlink" title="9、Fatal Exception:  CALayerInvalidGeometry"></a>9、<strong>Fatal Exception:</strong>  CALayerInvalidGeometry</h5><p><img src="https://ws1.sinaimg.cn/large/006C7g0Qly1g8vmbcw5vzj30oo0cewfy.jpg" alt="reader_crash.png"></p>
 <p>​    项目中出现CALayer position contains NaN: [nan nan] 闪退，该类型闪退表示CALayer的坐标出现了非数字，通常是除零操作导致的。闪退堆栈很清晰的指向EMReader.m中的第209行，</p>
 <pre><code class="objective-c">ReaderContentView *contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase];
 </code></pre>
